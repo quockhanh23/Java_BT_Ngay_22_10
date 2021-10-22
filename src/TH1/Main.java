@@ -5,7 +5,7 @@ public class Main {
         Dictionary dictionary = new Dictionary();
         dictionary.print();
         dictionary.search("xxxx");
-        dictionary.search("pig");
+        dictionary.search("  PIG    ");
 
     }
 }

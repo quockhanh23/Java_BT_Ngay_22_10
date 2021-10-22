@@ -36,8 +36,9 @@ public class Dictionary {
     }
 
     public void search(String eng) {
-        if (this.dictionary.containsKey(eng)) {
-            System.out.println(eng + " : " + dictionary.get(eng));
+        String engLowerCase = eng.toLowerCase().trim();
+        if (this.dictionary.containsKey(engLowerCase)) {
+            System.out.println(eng + " : " + dictionary.get(engLowerCase));
         } else {
             System.out.println("can't find " + eng);
         }
