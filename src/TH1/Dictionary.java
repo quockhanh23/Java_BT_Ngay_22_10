@@ -32,13 +32,13 @@ public class Dictionary {
     }
 
     public void add(String eng, String vie) {
-        this.dictionary.put(eng, vie);
+        this.dictionary.put(handleInputEng(eng), vie);
     }
 
     public void search(String eng) {
-        String engLowerCase = eng.toLowerCase().trim();
-        if (this.dictionary.containsKey(engLowerCase)) {
-            System.out.println(eng + " : " + dictionary.get(engLowerCase));
+
+        if (this.dictionary.containsKey(handleInputEng(eng))) {
+            System.out.println(eng + " : " + dictionary.get(handleInputEng(eng)));
         } else {
             System.out.println("can't find " + eng);
         }
@@ -47,6 +47,9 @@ public class Dictionary {
 
     public void print() {
         System.out.println(this.dictionary);
+    }
+    public String handleInputEng(String eng) {
+        return eng.toLowerCase().trim();
     }
 
 }
