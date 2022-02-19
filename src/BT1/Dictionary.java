@@ -1,4 +1,4 @@
-package TH1;
+package BT1;
 
 import java.util.*;
 
